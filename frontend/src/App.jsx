@@ -6,7 +6,7 @@ function App() {
   const [weather, setWeather] = useState(null);
 
   const getWeather = async () => {
-    const res = await axios.get(`http://localhost:5000/weather/${city}`);
+    const res = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/weather/${city}`);
     setWeather(res.data);
   };
 
